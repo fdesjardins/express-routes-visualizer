@@ -1,0 +1,76 @@
+{
+  "name": "express-routes-visualizer",
+  "description": "Visualize Express routes using D3",
+  "version": "0.0.0",
+  "author": {
+    "name": "Forrest Desjardins",
+    "email": "desjardinsfg@gmail.com",
+    "url": "github.com/fdesjardins"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
+    "standard": "^11.0.1"
+  },
+  "engines": {
+    "node": ">=7"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ],
+    "rules": {
+      "object-curly-spacing": [
+        2,
+        "always"
+      ],
+      "array-bracket-spacing": [
+        2,
+        "always"
+      ],
+      "func-style": [
+        2,
+        "expression"
+      ],
+      "prefer-arrow-callback": [
+        2,
+        {
+          "allowNamedFunctions": false
+        }
+      ]
+    }
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "express",
+    "express.js",
+    "node",
+    "routes",
+    "viewer",
+    "visualizer",
+    "graph",
+    "middleware",
+    "routing",
+    "hierarchy",
+    "visualization",
+    "list",
+    "structure"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
+  "repository": "fdesjardins/express-routes-visualizer",
+  "scripts": {
+    "test": "standard *.js && nyc ./node_modules/.bin/mocha --opts mocha.opts test.js"
+  }
+}
