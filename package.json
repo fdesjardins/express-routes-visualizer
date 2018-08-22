@@ -43,9 +43,6 @@
       ]
     }
   },
-  "files": [
-    "index.js"
-  ],
   "keywords": [
     "express",
     "express.js",
