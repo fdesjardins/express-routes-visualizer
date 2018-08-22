@@ -3,6 +3,3 @@ npm-debug.log
 
 coverage/
 .nyc_output
-
-example.js
-example-output.json
