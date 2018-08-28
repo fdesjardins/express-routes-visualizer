@@ -1,6 +1,7 @@
 # express-routes-visualizer
 
 [![Build Status][travis-image]][travis-url]
+[![NPM Version][npm-image]][npm-url]
 [![Coverage][coveralls-image]][coveralls-url]
 
 An express middleware and endpoint for viewing your app's route hierarchy.
@@ -44,5 +45,7 @@ MIT © [Forrest Desjardins](https://github.com/fdesjardins)
 [main-image]: .github/main.png
 [travis-url]: https://travis-ci.org/fdesjardins/express-routes-visualizer
 [travis-image]: https://img.shields.io/travis/fdesjardins/express-routes-visualizer.svg?style=flat
+[npm-url]: https://www.npmjs.com/package/express-routes-visualizer
+[npm-image]: https://img.shields.io/npm/v/express-routes-visualizer.svg?style=flat
 [coveralls-url]: https://coveralls.io/r/fdesjardins/express-routes-visualizer
 [coveralls-image]: https://img.shields.io/coveralls/fdesjardins/express-routes-visualizer.svg?style=flat
