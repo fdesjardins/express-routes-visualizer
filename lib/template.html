@@ -24,8 +24,15 @@
       stroke-width: 2px;
     }
     .node text {
-      font: 16px sans-serif;
+      font-family: sans-serif;
       background: {{styles.colors.nodeFill}};
+    }
+    .node text.default {
+      font-size: 16px;
+    }
+    .node text.http-method {
+      font-size: 11px;
+      font-weight: bold;
     }
     .link {
       fill: none;
@@ -113,8 +120,11 @@
           : styles.colors.circle.leaf.stroke
         )
 
+      const isHttpMethod = str => str.match(/GET|POST|DELETE|PUT|PATCH/)
+
       // Add labels for the nodes
       nodeEnter.append('text')
+        .attr('class', d => isHttpMethod(d.data.name) ? 'http-method' : 'default')
         .attr("dy", ".35em")
         .attr("x", d => 17)
         .attr("text-anchor", "start")
@@ -122,17 +132,20 @@
         .style("fill-opacity", 1)
         .style('fill', d => d.data.name.match(/:/)
           ? styles.colors.parameterizedRoute
+          : isHttpMethod(d.data.name)
+          ? styles.colors.nodeFill
           : styles.colors.foreground
         )
         .call(selection => selection.each(function(d){ d.bbox = this.getBBox() }))
 
       nodeEnter.insert("rect", "text")
+        .attr('class', d => isHttpMethod(d.data.name) ? 'http-method' : 'default')
         .attr("width", d => d.bbox.width + 12)
-        .attr("height", d => d.bbox.height + 15)
+        .attr("height", d => d.bbox.height + (isHttpMethod(d.data.name) ? 8 : 15))
         .attr("y", d => -1.0 * d.bbox.height)
         .attr("x", d => 10)
-        .attr("rx", 4)
-        .attr("ry", 4)
+        .attr("rx", d => isHttpMethod(d.data.name) ? 0 : 4)
+        .attr("ry", d => isHttpMethod(d.data.name) ? 0 : 4)
         .style("fill", d => {
           return {
             GET: styles.colors.httpMethods.GET.fill,
@@ -142,7 +155,7 @@
             PATCH: styles.colors.httpMethods.PATCH.fill
           }[d.data.name] || styles.colors.background
         })
-        .style("stroke", styles.colors.nodeStroke)
+        .style("stroke", d => isHttpMethod(d.data.name) ? styles.colors.nodeFill : styles.colors.nodeStroke)
 
       // Transition nodes to their new position.
       const nodeUpdate = nodeEnter.merge(node)
