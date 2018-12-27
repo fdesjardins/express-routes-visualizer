@@ -1,10 +1,11 @@
 # express-routes-visualizer
 
-[![Build Status][travis-image]][travis-url]
-[![NPM Version][npm-image]][npm-url]
-[![Coverage][coveralls-image]][coveralls-url]
-
 An express middleware and endpoint for viewing your app's route hierarchy.
+
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Coverage][coveralls-image]][coveralls-url]
+[![Maintainability][code-climate-image]][code-climate-url]
 
 ![Hackathon Starter Example][main-image]
 
@@ -49,3 +50,5 @@ MIT © [Forrest Desjardins](https://github.com/fdesjardins)
 [npm-image]: https://img.shields.io/npm/v/express-routes-visualizer.svg?style=flat
 [coveralls-url]: https://coveralls.io/r/fdesjardins/express-routes-visualizer
 [coveralls-image]: https://img.shields.io/coveralls/fdesjardins/express-routes-visualizer.svg?style=flat
+[code-climate-url]: https://codeclimate.com/github/fdesjardins/express-routes-visualizer/maintainability
+[code-climate-image]: https://api.codeclimate.com/v1/badges/629b4edb2f3333f35b43/maintainability
