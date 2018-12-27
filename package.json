@@ -46,17 +46,17 @@
   "keywords": [
     "express",
     "express.js",
+    "graph",
+    "hierarchy",
+    "list",
+    "middleware",
     "node",
     "routes",
-    "viewer",
-    "visualizer",
-    "graph",
-    "middleware",
     "routing",
-    "hierarchy",
+    "structure",
+    "viewer",
     "visualization",
-    "list",
-    "structure"
+    "visualizer"
   ],
   "license": "MIT",
   "main": "index.js",
@@ -68,6 +68,6 @@
   },
   "repository": "fdesjardins/express-routes-visualizer",
   "scripts": {
-    "test": "standard *.js && nyc ./node_modules/.bin/mocha --opts mocha.opts test.js"
+    "test": "standard *.js && nyc mocha --opts mocha.opts test.js"
   }
 }
