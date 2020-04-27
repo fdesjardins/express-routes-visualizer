@@ -9,7 +9,7 @@ An express middleware and endpoint for viewing your app's route hierarchy.
 
 ![Hackathon Starter Example][main-image]
 
-Note, this isn't working with `express.Router()` instances at the moment.
+~~Note, this isn't working with `express.Router()` instances at the moment.~~ 
 
 ## Installation
 
